@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title> Simple currency converter</title>
+</head>
+<script language="Javascript">
+
+function showresult(choise){
+var n1=parseFloat(document.getElementById('num1').value);
+var yen=129.4;
+var eur=0.800284;
+var gbp=0.7;
+var php=51.74;
+var r;
+var c=choise;
+
+switch(c)
+	{
+	case '1':
+		r=n1*yen + " Yen";
+		break;
+	case '2':
+        r=n1*eur + " Euro";
+		break;
+	case '3':
+		r=n1*gbp + " Pounsterling";
+		break;
+	case '4': 
+        r=n1*php + " Peso";
+		break;
+	default:
+		break;
+			
+	}
+document.getElementById('result').value=r;
+
+	
+
+}
+</script>
+<h1>Simple Currency Converter</h1>
+<table border="1" cellpadding="5" cellspacing="5" width="600">
+<tr align="center">
+<td>USD</td>
+<td>Result</td>
+</tr>
+<tr align="center">
+    <td><input name="number1" type="text" size=10 id='num1'/></td>
+    <td> <input type="text" id='result' readonly ></td>
+</tr>
+<tr>
+<td colspan="3">
+    <button onclick="showresult('1')">Japanese Yen</button>
+    <button onclick="showresult('2')">Euro</button>
+    <button onclick="showresult('3')">Pounsterling</button>
+    <button onclick="showresult('4')">Peso</button>
+</td>
+</tr>
+
+</table>
+</body>
+</html>
